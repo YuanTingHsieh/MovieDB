@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Movies DB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h3>Search for Movie Reviews</h3>
+
+      <p>Use the following fields to specify a search criteria you have for a specific set of movie reviews.
+      Once entered, press submit to see the results. <br>
+      <b>NOTE: You must specify at least one field.</b> </p>
+
+      <form action="{{ url_for('search_reviews') }}" method="POST">
+        
+        <div class="form-group row">
+          <label for="movie_name" class="col-sm-2 col-form-label">Movie name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="movie_name" name="movie_name" placeholder="Pulp Fiction">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="director_name" class="col-sm-2 col-form-label">Directed By</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="director_name" name="director_name" placeholder="Quentin Tarantino">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="actor_name" class="col-sm-2 col-form-label">Featuring Actor</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="actor_name" name="actor_name" placeholder="John Travolta">
+          </div>
+        </div>
+
+        <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        </div>
+
+        </form>
+      <a href="\" class="btn btn-outline-primary" role="button">Go Back Home</a>
+      </div>
+   </body>
+</html>

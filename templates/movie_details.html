@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+     <title>Movies DB</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </head>
+    <body>
+    
+      <div class="container">
+        <h1>{{ movie["name"] }} </h1>
+        <img src="{{ movie['img_src'] }}" class="img-thumbnail float-right" alt="Movie Thumbnail">
+
+        <p><b>Overview</b></p>
+        <p>{{movie["overview"]}}</p>
+        <p><b>Runtime (mins):</b> {{movie["runtime"]}} </p>
+        <p><b>Release Date:</b> {{movie["release_date"]}} </p>
+        <p><b>Director:</b> {{movie["director"]}} </p>
+
+        <h4> Actors </h4>
+        <ul>
+          {% for actor in actors %}
+            <li>{{actor["name"]}}
+          {% endfor %}
+        </ul>
+
+        <h4> Reviews </h4>
+        <table class="table">
+            <thead>
+                <th scope="col">Author</th>
+                <th scope="col">Review</th>
+                
+            </thead>
+            
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review["author"]}}</td>
+                    <td>{{review["content"]}}</td>   
+                </tr>
+            {% endfor %}
+        </table>
+            
+      <a href="\" class="btn btn-outline-primary" role="button">Go Back Home</a>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Movies DB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="jumbotron">
+      <h1 class="display-3">Movie DB</h1>
+      <p class="lead">This is the final project of CS564 at UW-Madison.</p>
+      <hr class="my-4">
+      <h2><a href="/search"> Search Interface </a></h2>
+      <h2><a href="/data_entry"> Data Entry Interface </a></h2>
+      <h2><a href="/browsing"> Browsing Interface </a></h2>
+      <h2><a href="/link"> All links </a></h2>
+      <button class="btn btn-outline-danger" role="button" onclick="myFunction()">RESET DATABASE</button>
+      <script>
+      function myFunction() {
+          if (confirm("Are you sure you want to reset the database?") == true) {
+              document.location.href="/reset";
+          }
+      }
+      </script>
+
+  </body>
+</html>

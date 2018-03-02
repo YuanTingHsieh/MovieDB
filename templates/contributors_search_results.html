@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Movies DB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <table class="table table-hover table-bordered">
+        <thead class="table-dark">
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date of Birth</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Biography</th>
+        </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["cid"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["dob"]}}</td>
+               <td>{{row["gender"]}}</td>
+               <td>{{row["bio"]}}</td>    
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href="\" class="btn btn-outline-primary" role="button">Go Back Home</a>
+    </div>
+   </body>
+</html>
